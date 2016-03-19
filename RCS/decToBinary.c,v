@@ -1,0 +1,98 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.2
+date	2014.04.02.22.09.23;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.04.02.21.05.24;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@
+/* Patrick Russell pcrussel
+//
+// CMPS101 Program 1: decToBinary
+//
+// Usage: decToBinary [Number]
+//        
+//        Reads in a number from the standard input and 
+//        converts it to binary.
+*/
+
+
+#include "intstack.h"
+#include "myinclude.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main (int argc, char **argv){
+   StackHndl *stack = NULL;
+   stack = NewStack();
+   int input = 0;
+   if (scanf("%d", &input) == 1) {
+      printf("debug, input = %d\n", input);
+   }
+   if (input == 0){
+      /*push number onto stack*/
+      Push(stack, 0);
+   }
+   /*convert to binary*/
+   while(input > 0){
+      if(input%2 == 1){
+         /*push 1 onto stack*/
+         Push(stack, 1);
+      }else{
+         /*push 0 onto stack*/
+         Push(stack, 0);
+      }
+      input = input / 2;
+   }
+   
+   /*print stack*/
+   while(!IsEmpty(stack)){
+      printf("%d", Top(stack));
+      Pop(stack);
+   }
+   printf("\n");
+   return 0;
+}
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 2
+a2 1
+// Patrick Russell pcrussel
+d10 2
+a11 1
+//
+d13 5
+a17 2
+#include<stdio.h>
+#include<stdlib.h>
+d20 29
+a48 1
+   return 1;
+@

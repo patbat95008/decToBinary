@@ -1,0 +1,31 @@
+Name: Patrick Russell
+Username: pcrussel @ucsc.edu
+
+
+The RussellPProg1.zip contains the following:
+
+
+README		A file that lists the files associated with
+		the intstack ADT and their purposes, as well
+		as the decToBinary program.
+
+
+myinclude.h	A set of libraries and deinitions
+
+
+intstack.c	Implementation of the inststack module
+
+
+intstack.h	Header file for the intstack module
+
+
+intstackdr.c	A test file to ensure that intstack works
+
+
+decToBinary.c	Main code that takes an integer and returns
+		a binary string
+
+
+Makefile	Builds the intstack module along with 
+		decToBinary.c. Creates the decToBinary
+		executable
